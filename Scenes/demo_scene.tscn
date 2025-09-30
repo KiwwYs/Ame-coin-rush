@@ -261,6 +261,14 @@ position = Vector2(580, 264.25)
 scale = Vector2(1.44068, 1.4447)
 texture = ExtResource("10_okl2h")
 
+[node name="Button" type="Button" parent="UserInterface/Win"]
+layout_mode = 0
+offset_left = 517.0
+offset_top = 547.0
+offset_right = 670.0
+offset_bottom = 578.0
+text = "exit"
+
 [node name="Start" type="Control" parent="UserInterface"]
 layout_mode = 3
 anchors_preset = 0
@@ -283,4 +291,5 @@ theme_override_font_sizes/font_size = 40
 text = "LET'S GOO"
 
 [connection signal="body_entered" from="DeadZone" to="DeadZone" method="_on_body_entered"]
+[connection signal="pressed" from="UserInterface/Win/Button" to="GameManager" method="_on_button_exit_pressed"]
 [connection signal="pressed" from="UserInterface/Start/Button" to="GameManager" method="_on_button_pressed"]

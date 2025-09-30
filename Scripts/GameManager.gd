@@ -22,9 +22,14 @@ func add_score():
 		show_win()
 
 func show_win():
+	Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
 	get_node("/root/DemoScene/UserInterface/Win").visible = true
 	
 	
 func _on_button_pressed():
 	get_node("/root/DemoScene/UserInterface/Start").visible = false
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
+
+
+func _on_button_exit_pressed():
+	get_tree().quit()
