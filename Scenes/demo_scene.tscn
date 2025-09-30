@@ -261,4 +261,26 @@ position = Vector2(580, 264.25)
 scale = Vector2(1.44068, 1.4447)
 texture = ExtResource("10_okl2h")
 
+[node name="Start" type="Control" parent="UserInterface"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="ColorRect" type="ColorRect" parent="UserInterface/Start"]
+layout_mode = 0
+offset_right = 1162.0
+offset_bottom = 659.0
+color = Color(1, 0.835294, 0.294118, 0.647059)
+
+[node name="Button" type="Button" parent="UserInterface/Start"]
+layout_mode = 0
+offset_left = 411.0
+offset_top = 234.0
+offset_right = 764.0
+offset_bottom = 310.0
+theme_override_font_sizes/font_size = 40
+text = "LET'S GOO"
+
 [connection signal="body_entered" from="DeadZone" to="DeadZone" method="_on_body_entered"]
+[connection signal="pressed" from="UserInterface/Start/Button" to="GameManager" method="_on_button_pressed"]
