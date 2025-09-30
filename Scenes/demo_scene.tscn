@@ -264,8 +264,8 @@ texture = ExtResource("10_okl2h")
 [node name="Start" type="Control" parent="UserInterface"]
 layout_mode = 3
 anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0
+offset_right = 1162.0
+offset_bottom = 662.0
 
 [node name="ColorRect" type="ColorRect" parent="UserInterface/Start"]
 layout_mode = 0
